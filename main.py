@@ -6,9 +6,8 @@ guess=int(input())
 while guess != number:
     if guess < number:
         print("Too low, guess again: ")
-        guess=int(input())
     if guess > number:
         print("Too high, guess again: ")
-        guess = int(input())
-
+    
+    guess=int(input())
 print("congratulations, you win")
