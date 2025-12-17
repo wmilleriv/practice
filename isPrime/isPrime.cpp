@@ -15,14 +15,10 @@ bool isPrime(int n){
 
 int main(){
 
-    int in{0};
-    std::cout << "Enter an integer: ";
-    std::cin >> in;
-
-    if(isPrime(in))
-        std::cout << in << " is prime.\n";
-    else
-        std::cout << in << " is not prime. \n";
+	for(int i{17};i<999999999999999;i+=2){
+    		if(isPrime(i))
+        		std::cout << i << " is prime.\n";
+	}
 
     return 0;
 }
