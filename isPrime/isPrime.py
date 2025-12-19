@@ -10,6 +10,7 @@ def isPrime(n):
 
 print("Enter an integer: ")
 number=input()
+#TODO: get input from text file and rewrite new list ofknown primes
 if(isPrime(int(number))):
     print(number + " is prime")
 else:

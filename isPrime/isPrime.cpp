@@ -14,7 +14,8 @@ bool isPrime(int n){
 }
 
 int main(){
-
+//TODO: get known prime list from text fileand rewrite it with extended list
+//
 	for(int i{17};i<999999999999999;i+=2){
     		if(isPrime(i))
         		std::cout << i << " is prime.\n";
