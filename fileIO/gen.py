@@ -1,17 +1,24 @@
 import random
 import string
 
-msg="Congratulations, you found the secret message"
+
+MSG="Congratulations, you found the secret message."
+ENCODED_SIZE=10000
 chars=list(msg)
+encodedMsg=""
 
 
 with open('msg1.txt', 'w') as file:
+    file.write(encodedMsg)
+   
+
+def fiveModulo(MSG, ENCODED_SIZE, encodedMsg):
     x=0
-    for i in range(10000):
-        if(i%5==0 and x<len(chars)):
-            file.write(chars[x])
+    for i in range(ENCODED_SIZE):
+       if(i%5==0 and x<len(MSG)):
+            encodedMsg=MSG[x]
             x+=1
         else:
             random_char =random.choice(string.ascii_letters)
-            file.write(random_char)
+            encodedMsg+=(random_char)
 
