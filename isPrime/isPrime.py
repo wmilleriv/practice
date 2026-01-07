@@ -1,17 +1,18 @@
+
 def isPrime(n):
-    if(n<3):
-        return True
-    if(n%2==0):
-        return False
-    for i in range(3,int((n**(1/2)))+1, 2):
-        if n%i==0:
+    for num in nums:
+        if n%num==0:
             return False
     return True
 
-print("Enter an integer: ")
-number=input()
-#TODO: get input from text file and rewrite new list ofknown primes
-if(isPrime(int(number))):
-    print(number + " is prime")
-else:
-    print(number + " is not prime")
+nums=[]
+with open('primes.txt','r') as p:
+    nums.append(p.read(1))
+ 
+primes=[]
+for i in range(1000):
+    if(isPrime(count)):
+       primes.add(count)
+
+with open('primes.txt','a') as p:
+       p.append(primes)
