@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <vector>
 
 bool isPrime(int n){
     if(n<3)
@@ -15,7 +16,15 @@ bool isPrime(int n){
     return true;
 }
 
+std::vector<int> primes(){
+	std::vector<int> p{};
+	std::ifstream file("primes.txt");
+	std::cout << file <<'\n';
+	return p;
+
+
 int main(){
+
 //TODO: get known prime list from text fileand rewrite it with extended list
 //
 	for(int i{17};i<999999999999999;i+=2){
