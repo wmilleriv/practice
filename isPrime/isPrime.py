@@ -20,11 +20,10 @@ with open('primes.csv','r',newline='') as p:
         nums.extend(row)
  
 
-for i in range((int(nums[-1])+2),(int(nums[-1])**2)):
-    primes=[]
-    for j in range(1000):
-        if(isPrime(i)):
-            primes.append(i)
+primes=[]
+for i in range((int(nums[-1])+2),int(nums[-1])+1000):
+    if(isPrime(i)):
+        primes.append(i)
     saveList(primes)
 
 
