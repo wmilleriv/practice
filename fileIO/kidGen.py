@@ -16,6 +16,13 @@ def encode(MSG, encodedMsg):
             encodedMsg+=str(ord(MSG[i])) + "  "
     write(encodedMsg)
 
+def decode(output, encodedMsg):
+    #TODO encode message 
+
+
+choice=''
+while(True):
+    print("Type e to encode a message or d to decode one")
 
 
 encode(MSG, encodedMsg)
