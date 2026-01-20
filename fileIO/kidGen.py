@@ -6,6 +6,8 @@ MSG="This is written using ASCII. ASCII is one of the oldest ways to translate c
 encodedMsg=""
 
 
+def read():
+
 
 def write(msg):
     with open('ascii.txt', 'w') as f:
@@ -14,10 +16,14 @@ def write(msg):
 def encode(MSG, encodedMsg):
     for i in range(len(MSG)):
             encodedMsg+=str(ord(MSG[i])) + "  "
-    write(encodedMsg)
+    return encodedMsg
 
-def decode(output, encodedMsg):
-    #TODO encode message 
+def decode(encodedMsg):
+    out=""
+    char=''
+    x=0
+    return out
+    
 
 
 choice=''
@@ -25,7 +31,7 @@ while(True):
     print("Type e to encode a message or d to decode one")
 
 
-encode(MSG, encodedMsg)
+write(encode(MSG, encodedMsg))
 
    
 
