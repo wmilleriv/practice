@@ -7,7 +7,7 @@ encodedMsg=""
 
 
 def read():
-
+    return 0
 
 def write(msg):
     with open('ascii.txt', 'w') as f:
@@ -29,6 +29,17 @@ def decode(encodedMsg):
 choice=''
 while(True):
     print("Type e to encode a message or d to decode one")
+    try:
+        choice=input()
+        if(choice=='d'):
+            print(decode(encodedMsg))
+        elif(choice=='e'):
+            print(encode(MSG,encodedMsg))
+        else:
+            print("invalid choice. Please type e or d")
+            choice=input()
+    except:
+        print("crap")
 
 
 write(encode(MSG, encodedMsg))
