@@ -21,7 +21,19 @@ def menu():
         print("2) decrypt a message")
         print("3) exit")
         print("-------------------------")
-        choice=input()
-    return choice
+        try:
+            choice=int(input())
+            if(choice==1):
+                print(encode(MESSAGE_SAMPLE))
+            elif(choice==2):
+                print(decode(ENCRYPTED_SAMPLE))
+            elif(choice==3):
+                exit()
+            else:
+                print("Please choose a valid option (1, 2, or 3)")
+        except ValueError:
+                print("Invalid input. Please try again.")
+
+
+
 menu()
-#print(decode(ENCRYPTED_SAMPLE))
