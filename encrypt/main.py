@@ -13,5 +13,15 @@ def decode(encoded_msg):
         msg+=str(chr(int(char)))
     return msg
 
-
-print(decode(ENCRYPTED_SAMPLE))
+def menu():
+    while(True):
+        print("Please choose an option")
+        print("--------------------------")
+        print("1) encrypt a message")
+        print("2) decrypt a message")
+        print("3) exit")
+        print("-------------------------")
+        choice=input()
+    return choice
+menu()
+#print(decode(ENCRYPTED_SAMPLE))
