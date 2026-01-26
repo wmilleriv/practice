@@ -13,6 +13,17 @@ def decode(encoded_msg):
         msg+=str(chr(int(char)))
     return msg
 
+def readFile(fileName):
+    try:
+        with open(fileName,"r") as f:
+            return f.read()
+    except FileNotFound:
+        print("Error file not found")
+
+def writeFile(fileName, text):
+    with open(fileName."w") as f:
+        f.write(text)
+
 def menu():
     while(True):
         print("Please choose an option")
@@ -24,7 +35,7 @@ def menu():
         try:
             choice=int(input())
             if(choice==1):
-                print(encode(MESSAGE_SAMPLE))
+                print(encode(readFile("testFile.txt")))
             elif(choice==2):
                 print(decode(ENCRYPTED_SAMPLE))
             elif(choice==3):
