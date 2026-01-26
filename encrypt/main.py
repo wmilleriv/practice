@@ -1,5 +1,6 @@
 MESSAGE_SAMPLE="This is a sample message for testing. It should be replaced later"
 ENCRYPTED_SAMPLE="65 66 67 68 69 70 71 72"
+currently_loaded_message=ENCRYPTED_SAMPLE
 def encode(msg):
     encodedMsg=""
     for char in list(msg):
@@ -30,14 +31,16 @@ def menu():
         print("--------------------------")
         print("1) encrypt a message")
         print("2) decrypt a message")
-        print("3) exit")
+        print("3) load a message from a file")
+        print("4) write last encrypted or decrypted message to a file")
+        print("5) exit")
         print("-------------------------")
         try:
             choice=int(input())
             if(choice==1):
                 print(encode(readFile("testFile.txt")))
             elif(choice==2):
-                print(decode(ENCRYPTED_SAMPLE))
+                print(decode(currently_loaded_message))
             elif(choice==3):
                 exit()
             else:
