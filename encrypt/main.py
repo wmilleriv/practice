@@ -31,17 +31,22 @@ def menu():
         print("--------------------------")
         print("1) encrypt a message")
         print("2) decrypt a message")
-        print("3) load a message from a file")
-        print("4) write last encrypted or decrypted message to a file")
-        print("5) exit")
+        print("3) show currently loaded message")
+        print("4) load a message from a file")
+        print("5) write currently loadedmessage to file")
+        print("6) exit")
         print("-------------------------")
         try:
             choice=int(input())
             if(choice==1):
-                print(encode(readFile("testFile.txt")))
+                print(encode(currently_loaded_message))
             elif(choice==2):
                 print(decode(currently_loaded_message))
             elif(choice==3):
+                print(currently_loaded_message)
+            elif(choice==4):
+                currently_loaded_message=readFile(testMessage)
+            elif(choice==6):
                 exit()
             else:
                 print("Please choose a valid option (1, 2, or 3)")
