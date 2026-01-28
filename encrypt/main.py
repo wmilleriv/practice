@@ -14,6 +14,12 @@ def decode(encoded_msg):
         msg+=str(chr(int(char)))
     return msg
 
+def getFileName():
+    print("Please enter the file you wish to use:")
+    name=input()
+    return name;
+
+
 def readFile(fileName):
     try:
         with open(fileName,"r") as f:
@@ -45,7 +51,9 @@ def menu():
             elif(choice==3):
                 print(currently_loaded_message)
             elif(choice==4):
-                currently_loaded_message=readFile(testMessage)
+                currently_loaded_message=readFile(getFileName())
+            elif(choice==5):
+                writeFile(getFileName(),cureently_loaded_message)
             elif(choice==6):
                 exit()
             else:
