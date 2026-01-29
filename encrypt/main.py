@@ -28,7 +28,7 @@ def readFile(fileName):
         print("Error file not found")
 
 def writeFile(fileName, text):
-    with open(fileName."w") as f:
+    with open(fileName,"w") as f:
         f.write(text)
 
 def menu():
