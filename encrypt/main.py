@@ -1,14 +1,14 @@
 MESSAGE_SAMPLE="This is a sample message for testing. It should be replaced later"
 ENCRYPTED_SAMPLE="65 66 67 68 69 70 71 72"
-currently_loaded_message=ENCRYPTED_SAMPLE
-def encode(msg):
+currently_loaded_message=MESSAGE_SAMPLE
+def encode(msg=MESSAGE_SAMPLE):
     encodedMsg=""
     for char in list(msg):
         encodedMsg+=str(ord(char))+" "
 
     return encodedMsg
 
-def decode(encoded_msg):
+def decode(encoded_msg=ENCRYPTED_SAMPLE):
     msg=""
     for char in encoded_msg.split():
         msg+=str(chr(int(char)))
@@ -32,6 +32,8 @@ def writeFile(fileName, text):
         f.write(text)
 
 def menu():
+    currently_loaded_message=MESSAGE_SAMPLE
+    
     while(True):
         print("Please choose an option")
         print("--------------------------")
@@ -39,7 +41,7 @@ def menu():
         print("2) decrypt a message")
         print("3) show currently loaded message")
         print("4) load a message from a file")
-        print("5) write currently loadedmessage to file")
+        print("5) write currently loaded message to file")
         print("6) exit")
         print("-------------------------")
         try:
