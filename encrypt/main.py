@@ -47,7 +47,7 @@ def menu():
         try:
             choice=int(input())
             if(choice==1):
-                print(encode(currently_loaded_message))
+                currently_loaded_message=encode(currently_loaded_message)
             elif(choice==2):
                 print(decode(currently_loaded_message))
             elif(choice==3):
@@ -55,7 +55,7 @@ def menu():
             elif(choice==4):
                 currently_loaded_message=readFile(getFileName())
             elif(choice==5):
-                writeFile(getFileName(),cureently_loaded_message)
+                writeFile(getFileName(),currently_loaded_message)
             elif(choice==6):
                 exit()
             else:
