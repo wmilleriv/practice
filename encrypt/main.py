@@ -24,7 +24,7 @@ def readFile(fileName):
     try:
         with open(fileName,"r") as f:
             return f.read()
-    except FileNotFound:
+    except FileNotFoundError:
         print("Error file not found")
 
 def writeFile(fileName, text):
@@ -49,7 +49,7 @@ def menu():
             if(choice==1):
                 currently_loaded_message=encode(currently_loaded_message)
             elif(choice==2):
-                currently_encoded_message=decode(currently_loaded_message))
+                currently_encoded_message=decode(currently_loaded_message)
             elif(choice==3):
                 print(currently_loaded_message)
             elif(choice==4):
