@@ -1,33 +1,28 @@
-import csv
 
-def isPrime(n):
-    for num in nums:
-        if n%int(num.strip())==0:
+def isPrime(n,knownPrimes):
+    for num in knownPrimes:
+        if n%int(num)==0:
             return False
-    print(str(n) + "is prime")
     return True
 
 
 def saveList(primes):
-    with open('primes.csv','a',newline='') as p:
-        writer=csv.writer(p)
-        writer.writerow(primes)
+    with open('primes.txt','a') as f:
+        for item in primes:
+            f.write(str(item) + " ")
 
-nums=[]
-with open('primes.csv','r',newline='') as p:
-    reader=csv.reader(p) 
-    for row in reader:
-        nums.extend(row)
- 
+def read():
+    knownPrimes=[]
+    with open('primes.txt','r') as f:
+        for prime in f.read().split():
+            knownPrimes.append(prime)
+    return knownPrimes;
+    
+knownPrimes=read()
+newPrimes=[]
+for i in range((int(knownPrimes[-1])+2),int(knownPrimes[-1])+1000):
+    if(isPrime(i, knownPrimes)):
+        newPrimes.append(i)
+    saveList(newPrimes)
 
-primes=[]
-for i in range((int(nums[-1])+2),int(nums[-1])+1000):
-    if(isPrime(i)):
-        primes.append(i)
-    saveList(primes)
 
-
-def saveList(primes):
-    with open('primes.csv','a',newline='') as p:
-        writer=csv.writer(p)
-        writer.writerow(primes)
