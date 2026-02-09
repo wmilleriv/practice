@@ -23,6 +23,6 @@ newPrimes=[]
 for i in range((int(knownPrimes[-1])+2),int(knownPrimes[-1])+1000):
     if(isPrime(i, knownPrimes)):
         newPrimes.append(i)
-    saveList(newPrimes)
+saveList(newPrimes)
 
 
