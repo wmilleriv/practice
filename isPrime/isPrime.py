@@ -20,7 +20,7 @@ def read():
     
 knownPrimes=read()
 newPrimes=[]
-for i in range((int(knownPrimes[-1])+2),int(knownPrimes[-1])+1000000):
+for i in range((int(knownPrimes[-1])+2),int(knownPrimes[-1])+100000):
     if(isPrime(i, knownPrimes)):
         newPrimes.append(i)
 saveList(newPrimes)
