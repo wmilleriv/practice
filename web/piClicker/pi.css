@@ -1,6 +1,14 @@
+div{
+	text-align:center;
+}
+#button{
+	text-align:center;
+}
 #update{
 	width:200px;
 	height:100px;
 	border:2px solid black;
 	border-radius:10px;
 }
+
+
