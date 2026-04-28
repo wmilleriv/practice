@@ -1,8 +1,9 @@
 #include <iostream>
 
 int main(){
-	int x{5};
-	if(!(x<9)){
+	int x{0};
+	int y{x};
+	if((++x)>y){
 		std::cout << "True\n";
 	}
 	else{
