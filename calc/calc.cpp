@@ -52,7 +52,16 @@ int pow(int x, int y, int z=0){
 		return pow(mult(x,z),sub(y,1), z);
 }
 
-int menu(){
+int getOperand(){
+	int op{};
+	std::cout << "Enter and operand: ";
+	std::cin >> op;
+	return op;
+}
+
+void menu(){
+	int leftOperand{};
+	int rightOperand{};
 	int operation{0};
 	std::cout << "Choose an operation\n";
 	std::cout <<"--------------------------\n";
@@ -61,18 +70,30 @@ int menu(){
 	std::cout <<"3) Multiplication\n";
 	std::cout <<"4) Division\n";
 	std::cout <<"5) Exponentiation\n";
+	std::cout <<"6) Quit\n";
 	std::cout <<"--------------------------\n";
-	std::cin >> 
-	return 0;
+
+	std::cin >> operation; 
+
+	switch(operation){
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			std::exit(0);
+		default:
+			std::cout << "Invalid Choice, Please select again\n";
+			break;
+	}
+	
+	menu();
 
 }
 
 
 int main(){
-	std::cout << add(100,5) << '\n';
-	std::cout << sub(100,5) << '\n';
-	std::cout << mult(100,5) << '\n';
-	std::cout << divide(100,7) << '\n';
-	std::cout << pow(3,4) <<'\n';
+	menu();
 	return 0;
 }
