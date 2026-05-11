@@ -4,15 +4,6 @@ bool comp(int x, int y){
 	return x==y;
 } 
 
-bool lessThan(int x, int y){
-	
-	if(comp(y,0))
-		return false;
-	if(comp(x,0))
-		return true;
-	return(lessThan(x-1,y-1));
-}
-
 int add(int x, int y){
 	return x+y;
 }
@@ -21,6 +12,14 @@ int sub(int x, int y){
 	return x+-y;
 }
 
+bool lessThan(int x, int y){
+	
+	if(comp(y,0))
+		return false;
+	if(comp(x,0))
+		return true;
+	return(lessThan(sub(x,1),sub(y,1)));
+}
 int mult(int x, int y, int z=0){
 	if(comp(z,0))
 		z=x;
@@ -34,9 +33,9 @@ int divide(int x, int y, int z=0){
 	if(lessThan(x,y))
 		return z;
 	if(comp(x,0))
-		return z+1;
+		return add(z,1);
 	else
-		return(divide(sub(x,y),y,z+1));
+		return(divide(sub(x,y),y,add(z,1)));
 
 
 }
