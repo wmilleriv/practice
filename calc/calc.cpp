@@ -80,7 +80,7 @@ void printResult(int left,int right,int op){
 	
 }  
 
-bool menu(){
+int menu(){
 	
 	int leftOperand{};
 	int rightOperand{};
@@ -100,7 +100,7 @@ bool menu(){
 		return 0;
 	if(operation<1||operation>6){
 		std::cout << "Invalid Operation selected\n";
-		return(1);
+		return menu();
 	}
 	std::cout << "Enter first operand: ";
 	std::cin  >> leftOperand;
@@ -109,15 +109,13 @@ bool menu(){
 	
 	printResult(leftOperand,rightOperand,operation);
 	
-	return 1;
+	return menu();
 }
 
 
 int main(){
 	
-	bool again{1};
-	while(again)
-		again=menu();
+	int run{menu()};
 	
-	return 0;
+	return run;
 }
