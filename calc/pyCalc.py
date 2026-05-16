@@ -26,7 +26,11 @@ def exp(base,exp):
 		z*=base
 	return z
 	
+	
+def menu():
+	
 def test():
+	
 	print("Enter first value: ")
 	x=input()
 	print("Enter second value: ")
