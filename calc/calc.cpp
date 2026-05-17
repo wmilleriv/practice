@@ -117,5 +117,5 @@ int main(){
 	
 	int run{menu()};
 	
-	return run;
+	return run1;
 }
