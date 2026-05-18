@@ -20,7 +20,17 @@ def div(x,y):
 		z=add(z,1)
 	return z
 	
+def exp(base,exp):
+	z=base
+	for i in range(exp-1):
+		z*=base
+	return z
+	
+	
+def menu():
+	
 def test():
+	
 	print("Enter first value: ")
 	x=input()
 	print("Enter second value: ")
@@ -30,6 +40,7 @@ def test():
 	print("Subtract: " + str(sub(int(x),int(y))))
 	print("Multiply " + str(mult(int(x),int(y))))
 	print("Divide: " + str(div(int(x),int(y))))
+	print("Exponentiate: " + str(exp(int(x),int(y))))
 	
 	
 test()

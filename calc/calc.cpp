@@ -9,7 +9,7 @@ int add(int x, int y){
 }
 
 int sub(int x, int y){
-	return x+-y;
+	return add(x,-y);
 }
 
 bool lessThan(int x, int y){
@@ -40,7 +40,7 @@ int divide(int x, int y, int z=0){
 
 }
 
-int pow(int x, int y, int z=0){
+int exponentiate(int x, int y, int z=0){
 	if(comp(y,0))
 		return 1;
 	if(comp(z,0))
@@ -48,17 +48,40 @@ int pow(int x, int y, int z=0){
 	if(comp(y,1))
 		return x;
 	else
-		return pow(mult(x,z),sub(y,1), z);
+		return exponentiate(mult(x,z),sub(y,1), z);
 }
 
-int getOperand(){
-	int op{};
-	std::cout << "Enter and operand: ";
-	std::cin >> op;
-	return op;
-}
+void printResult(int left,int right,int op){
+		char opChar{};
+		int result{};
+	switch(op){
+		case 1:
+			opChar='+';
+			result=add(left,right);
+			break;
+		case 2:
+			opChar='-';
+			result=sub(left,right);
+			break;
+		case 3:
+			opChar='*';
+			result=mult(left,right);
+			break;
+		case 4:
+			opChar='/';
+			result=divide(left,right);
+			break;
+		case 5:
+			opChar='^';
+			result=exponentiate(left,right);
+			break;
+	}		
+	std::cout << left << opChar << right << '=' << result <<"\n\n";
+	
+}  
 
-void menu(){
+int menu(){
+	
 	int leftOperand{};
 	int rightOperand{};
 	int operation{0};
@@ -73,26 +96,26 @@ void menu(){
 	std::cout <<"--------------------------\n";
 
 	std::cin >> operation; 
-
-	switch(operation){
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-			std::exit(0);
-		default:
-			std::cout << "Invalid Choice, Please select again\n";
-			break;
+	if(operation==6)
+		return 0;
+	if(operation<1||operation>6){
+		std::cout << "Invalid Operation selected\n";
+		return menu();
 	}
+	std::cout << "Enter first operand: ";
+	std::cin  >> leftOperand;
+	std::cout << "Enter second operand: ";
+	std::cin >> rightOperand;
 	
-	menu();
-
+	printResult(leftOperand,rightOperand,operation);
+	
+	return menu();
 }
 
 
 int main(){
-	menu();
-	return 0;
+	
+	int run{menu()};
+	
+	return run1;
 }

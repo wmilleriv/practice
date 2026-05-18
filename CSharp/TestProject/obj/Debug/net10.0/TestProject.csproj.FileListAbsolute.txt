@@ -1,0 +1,15 @@
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/bin/Debug/net10.0/TestProject
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/bin/Debug/net10.0/TestProject.deps.json
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/bin/Debug/net10.0/TestProject.runtimeconfig.json
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/bin/Debug/net10.0/TestProject.dll
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/bin/Debug/net10.0/TestProject.pdb
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.AssemblyInfoInputs.cache
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.AssemblyInfo.cs
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.csproj.CoreCompileInputs.cache
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.sourcelink.json
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.dll
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/refint/TestProject.dll
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.pdb
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/TestProject.genruntimeconfig.cache
+/media/William/Storage/Source/repos/practice/CSharp/TestProject/obj/Debug/net10.0/ref/TestProject.dll
