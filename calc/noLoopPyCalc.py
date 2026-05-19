@@ -14,7 +14,9 @@ def lessThan(x,y):
 		return True
 	return(lessThan(subtract(x,1),subtract(y,1)))
 
-def multiply(x,y,z=0):#doesn't work for 0
+def multiply(x,y,z=0):
+	if isEqual(x,0) or isEqual(y,0):
+		return 0
 	if(isEqual(z,0)):
 		z=x
 	if(isEqual(y,1)):
@@ -37,8 +39,17 @@ def exponentiate(x,y, z=0):
 		return x
 	return exponentiate(multiply(x,z),subtract(y,1), z)
 	
-print(exponentiate(3,1))
-print(exponentiate(3,3))
-print(exponentiate(17,0))
+def menu():
+	print("Non-looping calculator app")
+	print("--------------------------")
+	print("1) Addition")
+	print("2) Subtraction")	
+	print("3) Multiply")
+	print("4) Divide")
+	print("5) Exponentiate")
+	print("6) Quit")
 	
+	operation=input()
+	if isEqual(operation,6):
+		sys.quit()
 	
