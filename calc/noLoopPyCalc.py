@@ -52,4 +52,5 @@ def menu():
 	operation=input()
 	if isEqual(operation,6):
 		sys.quit()
-	
+	if(operation<1 or operation >6):
+		print("Invalid operation selected")
