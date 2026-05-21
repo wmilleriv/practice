@@ -1,16 +1,12 @@
 #include <iostream>
 
-void doNothing(int&){
-}
-
-int main(){
-	int x;
+int main()
+{
+	int input{};
+	std::cout << "Enter an integer: ";
+	std::cin >> input;
 	
-	doNothing(x);
-	std::cout << x <<'\n';
-	
-	std::cout << sizeof(int) << '\n'; // print how many bytes of memory an int value takes
-
-	
+	std::cout << input << " doubled is " << 2*input <<'\n';
+	 
 	return 0;
 }

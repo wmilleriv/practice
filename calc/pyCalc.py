@@ -23,7 +23,7 @@ def div(x,y):
 def exp(base,exp):
 	z=base
 	for i in range(exp-1):
-		z*=base
+		z=mult(z,base)
 	return z
 	
 	
